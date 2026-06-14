@@ -99,34 +99,6 @@ landmarks3D/                    # Root repository
 </p>
 <p align="center"><em>Euclidean Average Variance Visualizations for 3D point cloud scans. Left: Half Ball geometry. Right: Freeform geometry.</em></p>
 
-## Workflow Stages
-
-The workflow is meticulously structured into the following core stages to provide an end-to-end framework for analyzing process-to-design variation in point clouds:
-
-
-### 1. Data Acquisition & Registration
-Raw `Freeform` and `Half-Ball` datasets are acquired and registered into a common coordinate system using Procrustes analysis to eliminate rigid body transformations.
-
-### 2. Preprocessing & Normalization
-The point clouds undergo scaling using Standard, MinMax, or Sphere normalization to prepare the geometries for manifold operations.
-
-### 3. Spectral Clustering
-An Affinity Matrix and Laplacian graph are constructed, followed by k-means clustering to segment the complex geometries.
-
-### 4. Cluster Label Alignment
-The Hungarian Algorithm is utilized to perfectly map and track identical cluster domains across varying part scans.
-
-### 5. Geodesic Mean Computation
-We compute the structural center of the geometries using both classical Euclidean Means and manifold-aware Fréchet Means.
-
-### 6. Principal Geodesic Analysis (PGA)
-Variations are mapped into Tangent Space to extract the principal geodesic directions governing the geometric deviation.
-
-### 7. Clustering Consistency
-Adjusted Rand Index (ARI) and Normalized Mutual Information (NMI) metrics guarantee the clustering algorithm is robust across multiple components.
-
-### 8. Variance & Kruskal-Wallis
-Statistical Kruskal-Wallis testing identifies whether structural variances show Significant Differences (p < 0.05) across clusters.
 
 ## Running the Pipeline
 
