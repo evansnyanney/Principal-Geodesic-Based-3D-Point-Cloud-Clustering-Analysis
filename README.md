@@ -6,7 +6,7 @@
 ## Pipeline Architecture
 
 <p align="center">
-  <img src="DOCS/images/pipeline.png" alt="PGA Pipeline Architecture" width="90%"/>
+  <img src="DOCS/pipeline.png" alt="PGA Pipeline Architecture" width="90%"/>
 </p>
 
 This repository contains the code for the paper **"Unveil the relationship between process and design embedded in the 3D point cloud using unsupervised learning"** by Evans Nyanney and Zhaohui Geng.
@@ -81,7 +81,6 @@ landmarks3D/                    # Root repository
 │   └── *.csv                   
 │
 ├── DOCS/                       # Documentation and figures
-│   └── images/
 │
 └── results/                    # Generated visual artifacts and CSVs
     ├── average_variance_plots/
@@ -94,8 +93,8 @@ landmarks3D/                    # Root repository
 ## Cluster Consistency
 
 <p align="center">
-  <img src="DOCS/images/half_ball.jpg" alt="Half Ball Variance Visualization" width="45%"/>
-  <img src="DOCS/images/freeform.jpg" alt="Freeform Variance Visualization" width="45%"/>
+  <img src="DOCS/half_ball.jpg" alt="Half Ball Variance Visualization" width="45%"/>
+  <img src="DOCS/freeform.jpg" alt="Freeform Variance Visualization" width="45%"/>
 </p>
 <p align="center"><em>Euclidean Average Variance Visualizations for 3D point cloud scans. Left: Half Ball geometry. Right: Freeform geometry.</em></p>
 
