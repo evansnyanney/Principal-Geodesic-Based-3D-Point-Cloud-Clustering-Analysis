@@ -95,34 +95,6 @@ landmarks3D/                    # Root repository
 
 The workflow is meticulously structured into the following core stages to provide an end-to-end framework for analyzing process-to-design variation in point clouds:
 
-```mermaid
-mindmap
-  root((PGA Pipeline for 3D Point Cloud Analysis))
-    id1["Data Acquisition & Registration"]
-      id1_1["(Freeform) & (Half-Ball)"]
-      id1_2["Procrustes"]
-    id2["Preprocessing & Normalization"]
-      id2_1["Standard"]
-      id2_2["MinMax"]
-      id2_3["Sphere"]
-    id3["Spectral Clustering"]
-      id3_1["Affinity Matrix"]
-      id3_2["Laplacian"]
-      id3_3["k-means"]
-    id4["Cluster Label Alignment"]
-      id4_1["Hungarian Algorithm"]
-    id5["Geodesic Mean Computation"]
-      id5_1["Euclidean Mean"]
-      id5_2["Fréchet Mean"]
-    id6["Principal Geodesic Analysis"]
-      id6_1["Tangent Space"]
-    id7["Clustering Consistency"]
-      id7_1["ARI"]
-      id7_2["NMI"]
-    id8["Variance & Kruskal-Wallis"]
-      id8_1["p < 0.05"]
-      id8_2["Significant Differences"]
-```
 
 ### 1. Data Acquisition & Registration
 Raw `Freeform` and `Half-Ball` datasets are acquired and registered into a common coordinate system using Procrustes analysis to eliminate rigid body transformations.
