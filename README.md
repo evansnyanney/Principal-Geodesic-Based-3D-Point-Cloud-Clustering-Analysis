@@ -98,30 +98,30 @@ The workflow is meticulously structured into the following core stages to provid
 ```mermaid
 mindmap
   root((PGA Pipeline for 3D Point Cloud Analysis))
-    Data Acquisition & Registration
-      (Freeform) & (Half-Ball)
-      Procrustes
-    Preprocessing & Normalization
-      Standard
-      MinMax
-      Sphere
-    Spectral Clustering
-      Affinity Matrix
-      Laplacian
-      k-means
-    Cluster Label Alignment
-      Hungarian Algorithm
-    Geodesic Mean Computation
-      Euclidean Mean
-      Fréchet Mean
-    Principal Geodesic Analysis
-      Tangent Space
-    Clustering Consistency
-      ARI
-      NMI
-    Variance & Kruskal-Wallis
-      p<0.05
-      Significant Differences
+    id1["Data Acquisition & Registration"]
+      id1_1["(Freeform) & (Half-Ball)"]
+      id1_2["Procrustes"]
+    id2["Preprocessing & Normalization"]
+      id2_1["Standard"]
+      id2_2["MinMax"]
+      id2_3["Sphere"]
+    id3["Spectral Clustering"]
+      id3_1["Affinity Matrix"]
+      id3_2["Laplacian"]
+      id3_3["k-means"]
+    id4["Cluster Label Alignment"]
+      id4_1["Hungarian Algorithm"]
+    id5["Geodesic Mean Computation"]
+      id5_1["Euclidean Mean"]
+      id5_2["Fréchet Mean"]
+    id6["Principal Geodesic Analysis"]
+      id6_1["Tangent Space"]
+    id7["Clustering Consistency"]
+      id7_1["ARI"]
+      id7_2["NMI"]
+    id8["Variance & Kruskal-Wallis"]
+      id8_1["p < 0.05"]
+      id8_2["Significant Differences"]
 ```
 
 ### 1. Data Acquisition & Registration
