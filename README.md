@@ -93,6 +93,10 @@ landmarks3D/                    # Root repository
 
 ## Pipeline Architecture
 
+<p align="center">
+  <img src="DOCS/images/pipeline.png" alt="PGA Pipeline Architecture" width="90%"/>
+</p>
+
 The workflow is meticulously structured into the following core stages to provide an end-to-end framework for analyzing process-to-design variation in point clouds:
 
 
