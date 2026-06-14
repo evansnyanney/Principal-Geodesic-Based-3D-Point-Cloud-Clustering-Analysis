@@ -1,0 +1,12 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Output directories
+results/
+*.log
+
+# VS Code / IDE
+.vscode/
+.idea/
