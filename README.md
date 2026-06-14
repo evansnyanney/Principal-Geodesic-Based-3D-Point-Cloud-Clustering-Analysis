@@ -1,5 +1,6 @@
 # Unveil the Relationship Between Process and Design Embedded in the 3D Point Cloud Using Unsupervised Learning
-[![DOI](https://zenodo.org/badge/DOI/10.1016/j.mfglet.2025.06.169.svg)](https://doi.org/10.1016/j.mfglet.2025.06.169)
+[![Paper DOI](https://img.shields.io/badge/Paper_DOI-10.1016%2Fj.mfglet.2025.06.169-blue.svg)](https://doi.org/10.1016/j.mfglet.2025.06.169)
+[![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20690053.svg)](https://doi.org/10.5281/zenodo.20690053)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)
 
