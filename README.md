@@ -128,13 +128,17 @@ If this repository is useful in your research or work, please cite the paper:
 ### BibTeX
 
 ~~~bibtex
-@article{nyanney2025unveil,
-  title={Unveil the relationship between process and design embedded in the 3D point cloud using unsupervised learning},
-  author={Nyanney, Evans and Geng, Zhaohui},
-  journal={Manufacturing Letters},
-  year={2025},
-  doi={10.1016/j.mfglet.2025.06.169},
-  url={https://doi.org/10.1016/j.mfglet.2025.06.169}
+@article{NYANNEY20251498,
+title = {Unveil the relationship between process and design embedded in the 3D point cloud using unsupervised learning},
+journal = {Manufacturing Letters},
+volume = {44},
+pages = {1498-1506},
+year = {2025},
+note = {53rd SME North American Manufacturing Research Conference (NAMRC 53)},
+issn = {2213-8463},
+doi = {https://doi.org/10.1016/j.mfglet.2025.06.169},
+url = {https://www.sciencedirect.com/science/article/pii/S2213846325002056},
+author = {Evans Nyanney and Zhaohui Geng}
 }
 ~~~
 
