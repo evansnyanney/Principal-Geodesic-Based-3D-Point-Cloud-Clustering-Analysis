@@ -91,32 +91,71 @@ landmarks3D/                    # Root repository
     └── variance_distributions/
 ```
 
-## Methodological Summary
+## Pipeline Architecture
 
-- **Normalization**: Configurable standard, min-max, or unit sphere projection.
-- **Clustering**: Spectral clustering utilizing k-nearest neighbors graph representation.
-- **Geodesic Analysis**: Manifold operations for Fréchet/Euclidean means, combined with Principal Geodesic Analysis (PGA) to extract principal modes of variation.
-- **Statistical Testing**: Kruskal-Wallis H-test to validate variance significance across distinct geometric clusters.
-- **Metrics**: Clustering consistency is evaluated using Adjusted Rand Index (ARI) and Normalized Mutual Information (NMI) across multiple scans.
+The workflow is meticulously structured into the following core stages to provide an end-to-end framework for analyzing process-to-design variation in point clouds:
 
-## Typical Workflow
-
-1. **Configure settings**: Adjust normalization methods and cluster counts in `pga_pipeline/config.py` and `scripts/run_analysis.py`.
-
-2. **Run the full analysis pipeline**:
-```bash
-python -m scripts.run_analysis
+```mermaid
+mindmap
+  root((PGA Pipeline for 3D Point Cloud Analysis))
+    Data Acquisition & Registration
+      (Freeform) & (Half-Ball)
+      Procrustes
+    Preprocessing & Normalization
+      Standard
+      MinMax
+      Sphere
+    Spectral Clustering
+      Affinity Matrix
+      Laplacian
+      k-means
+    Cluster Label Alignment
+      Hungarian Algorithm
+    Geodesic Mean Computation
+      Euclidean Mean
+      Fréchet Mean
+    Principal Geodesic Analysis
+      Tangent Space
+    Clustering Consistency
+      ARI
+      NMI
+    Variance & Kruskal-Wallis
+      p<0.05
+      Significant Differences
 ```
 
-3. **Inspect the results**:
-Check the `results/` folder for 3D scatter plots, average variance mapping, principal geodesic direction vectors, and the aggregated `combined_within_cluster_variances.csv`.
+### 1. Data Acquisition & Registration
+Raw `Freeform` and `Half-Ball` datasets are acquired and registered into a common coordinate system using Procrustes analysis to eliminate rigid body transformations.
 
-## Metrics and Reporting
+### 2. Preprocessing & Normalization
+The point clouds undergo scaling using Standard, MinMax, or Sphere normalization to prepare the geometries for manifold operations.
 
-The pipeline generates robust analytical reports for point cloud geometries:
-- **Consistency**: ARI and NMI metrics comparing cluster assignments across part scans.
-- **Variances**: Mean and standard deviation of `X`, `Y`, and `Z` variance grouped by cluster.
-- **Visuals**: Dense 3D plots showing localized cluster assignment and manifold means.
+### 3. Spectral Clustering
+An Affinity Matrix and Laplacian graph are constructed, followed by k-means clustering to segment the complex geometries.
+
+### 4. Cluster Label Alignment
+The Hungarian Algorithm is utilized to perfectly map and track identical cluster domains across varying part scans.
+
+### 5. Geodesic Mean Computation
+We compute the structural center of the geometries using both classical Euclidean Means and manifold-aware Fréchet Means.
+
+### 6. Principal Geodesic Analysis (PGA)
+Variations are mapped into Tangent Space to extract the principal geodesic directions governing the geometric deviation.
+
+### 7. Clustering Consistency
+Adjusted Rand Index (ARI) and Normalized Mutual Information (NMI) metrics guarantee the clustering algorithm is robust across multiple components.
+
+### 8. Variance & Kruskal-Wallis
+Statistical Kruskal-Wallis testing identifies whether structural variances show Significant Differences (p < 0.05) across clusters.
+
+## Running the Pipeline
+
+1. **Configure settings**: Adjust your hyperparameters in `pga_pipeline/config.py`.
+2. **Execute**:
+   ```bash
+   python -m scripts.run_analysis
+   ```
+3. **Inspect**: Check the `results/` folder for 3D scatter plots, average variance mappings, geodesic vectors, and CSV reports.
 
 ## Citation
 
@@ -128,17 +167,14 @@ If this repository is useful in your research or work, please cite the paper:
 ### BibTeX
 
 ~~~bibtex
-@article{NYANNEY20251498,
-title = {Unveil the relationship between process and design embedded in the 3D point cloud using unsupervised learning},
-journal = {Manufacturing Letters},
-volume = {44},
-pages = {1498-1506},
-year = {2025},
-note = {53rd SME North American Manufacturing Research Conference (NAMRC 53)},
-issn = {2213-8463},
-doi = {https://doi.org/10.1016/j.mfglet.2025.06.169},
-url = {https://www.sciencedirect.com/science/article/pii/S2213846325002056},
-author = {Evans Nyanney and Zhaohui Geng}
+@article{nyanney2025unveil,
+  title={Unveil the relationship between process and design embedded in the 3D point cloud using unsupervised learning},
+  author={Nyanney, Evans and Geng, Zhaohui},
+  journal={Manufacturing Letters},
+  volume={44},
+  pages={1498--1506},
+  year={2025},
+  publisher={Elsevier}
 }
 ~~~
 
