@@ -5,7 +5,8 @@ import sys
 import os
 from tqdm import tqdm
 
-def load_csv(file_path, has_header=True, x_col='X', y_col='Y', z_col='Z'):
+
+def load_csv(file_path, has_header=True, x_col="X", y_col="Y", z_col="Z"):
     try:
         if has_header:
             df = pd.read_csv(file_path)
@@ -18,24 +19,32 @@ def load_csv(file_path, has_header=True, x_col='X', y_col='Y', z_col='Z'):
         logging.error(f"Error loading CSV file '{file_path}': {e}")
         sys.exit(1)
 
-def load_all_scans(folder_path, has_header=True, x_col='X', y_col='Y', z_col='Z', max_scans=None):
+
+def load_all_scans(
+    folder_path, has_header=True, x_col="X", y_col="Y", z_col="Z", max_scans=None
+):
     try:
-        scan_files = sorted([f for f in os.listdir(folder_path) if f.endswith('.csv')])
+        scan_files = sorted([f for f in os.listdir(folder_path) if f.endswith(".csv")])
         if max_scans:
             scan_files = scan_files[:max_scans]
         all_scans = []
         for file in tqdm(scan_files, desc="Loading scans"):
             file_path = os.path.join(folder_path, file)
-            scan_points = load_csv(file_path, has_header=has_header, x_col=x_col, y_col=y_col, z_col=z_col)
+            scan_points = load_csv(
+                file_path, has_header=has_header, x_col=x_col, y_col=y_col, z_col=z_col
+            )
             all_scans.append(scan_points)
         return all_scans
     except Exception as e:
         logging.error(f"Error loading scans: {e}")
         sys.exit(1)
 
-def load_pointwise_variance(file_path, variance_columns=None, expected_landmarks=None, variance_scale_factor=1.0):
+
+def load_pointwise_variance(
+    file_path, variance_columns=None, expected_landmarks=None, variance_scale_factor=1.0
+):
     if variance_columns is None:
-        variance_columns = ['Variance_X', 'Variance_Y', 'Variance_Z']
+        variance_columns = ["Variance_X", "Variance_Y", "Variance_Z"]
     try:
         df = pd.read_csv(file_path)
         variance_data = df[variance_columns].values.astype(np.float32)
