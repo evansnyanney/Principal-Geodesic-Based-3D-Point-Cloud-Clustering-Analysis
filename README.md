@@ -30,8 +30,8 @@ The pipeline includes data ingestion, point cloud normalization, spectral cluste
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/landmarks3D.git
-cd landmarks3D
+git clone https://github.com/evansnyanney/Principal-Geodesic-Based-3D-Point-Cloud-Clustering-Analysis.git
+cd Principal-Geodesic-Based-3D-Point-Cloud-Clustering-Analysis
 
 # Install dependencies
 pip install -r requirements.txt
