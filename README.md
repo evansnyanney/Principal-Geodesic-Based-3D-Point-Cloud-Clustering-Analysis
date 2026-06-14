@@ -3,6 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)
 
+## Pipeline Architecture
+
 <p align="center">
   <img src="DOCS/images/pipeline.png" alt="PGA Pipeline Architecture" width="90%"/>
 </p>
@@ -89,13 +91,15 @@ landmarks3D/                    # Root repository
     └── variance_distributions/
 ```
 
-## Pipeline Architecture
+## Cluster Consistency
 
 <p align="center">
   <img src="DOCS/images/half_ball.jpg" alt="Half Ball Variance Visualization" width="45%"/>
   <img src="DOCS/images/freeform.jpg" alt="Freeform Variance Visualization" width="45%"/>
 </p>
 <p align="center"><em>Euclidean Average Variance Visualizations for 3D point cloud scans. Left: Half Ball geometry. Right: Freeform geometry.</em></p>
+
+## Workflow Stages
 
 The workflow is meticulously structured into the following core stages to provide an end-to-end framework for analyzing process-to-design variation in point clouds:
 
