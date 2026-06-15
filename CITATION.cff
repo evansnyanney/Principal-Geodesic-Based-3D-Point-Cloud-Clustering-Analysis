@@ -1,15 +1,26 @@
 cff-version: 1.2.0
-message: "If you use this software in your research, please cite both the software and the paper as below."
+message: "If you use this software in your research, please cite both the software and the associated paper."
+title: "Principal-Geodesic-Based 3D Point Cloud Clustering Analysis"
 authors:
   - family-names: "Nyanney"
     given-names: "Evans"
   - family-names: "Geng"
     given-names: "Zhaohui"
-title: "Principal-Geodesic-Based-3D-Point-Cloud-Clustering-Analysis"
-version: 1.0.1
+version: "1.0.1"
 doi: "10.5281/zenodo.20690053"
-date-released: 2026-06-14
+date-released: "2026-06-14"
 url: "https://github.com/evansnyanney/Principal-Geodesic-Based-3D-Point-Cloud-Clustering-Analysis"
+repository-code: "https://github.com/evansnyanney/Principal-Geodesic-Based-3D-Point-Cloud-Clustering-Analysis"
+license: "MIT"
+keywords:
+  - "principal geodesic analysis"
+  - "3D point cloud"
+  - "spectral clustering"
+  - "reverse engineering"
+  - "additive manufacturing"
+  - "unsupervised learning"
+  - "variance analysis"
+
 preferred-citation:
   type: article
   authors:
@@ -24,3 +35,4 @@ preferred-citation:
   end: 1506
   year: 2025
   doi: "10.1016/j.mfglet.2025.06.169"
+  url: "https://www.sciencedirect.com/science/article/pii/S2213846325002056"
