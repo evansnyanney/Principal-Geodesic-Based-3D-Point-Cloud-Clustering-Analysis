@@ -27,7 +27,7 @@ The pipeline includes data ingestion, point cloud normalization, spectral cluste
 - [Citation](#citation)
 - [License](#license)
 
-## Installation
+## Installation 
 
 ```bash
 # Clone the repository
