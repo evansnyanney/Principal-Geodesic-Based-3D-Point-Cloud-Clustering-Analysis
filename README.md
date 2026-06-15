@@ -25,7 +25,7 @@ The pipeline includes data ingestion, point cloud normalization, spectral cluste
 - [Typical Workflow](#typical-workflow)
 - [Metrics and Reporting](#metrics-and-reporting)
 - [Citation](#citation)
-- [License](#license)
+- [License](#license) 
 
 ## Installation 
 
