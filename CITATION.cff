@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite both the software and the paper as below."
+authors:
+  - family-names: "Nyanney"
+    given-names: "Evans"
+  - family-names: "Geng"
+    given-names: "Zhaohui"
+title: "Principal-Geodesic-Based-3D-Point-Cloud-Clustering-Analysis"
+version: 1.0.1
+doi: "10.5281/zenodo.20690053"
+date-released: 2026-06-14
+url: "https://github.com/evansnyanney/Principal-Geodesic-Based-3D-Point-Cloud-Clustering-Analysis"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Nyanney"
+      given-names: "Evans"
+    - family-names: "Geng"
+      given-names: "Zhaohui"
+  title: "Unveil the relationship between process and design embedded in the 3D point cloud using unsupervised learning"
+  journal: "Manufacturing Letters"
+  volume: 44
+  start: 1498
+  end: 1506
+  year: 2025
+  doi: "10.1016/j.mfglet.2025.06.169"
