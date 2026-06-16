@@ -94,8 +94,8 @@ landmarks3D/                    # Root repository
 ## Cluster Consistency
 
 <p align="center">
-  <img src="DOCS/half_ball.jpg" alt="Half Ball Variance Visualization" width="50%"/>
-  <img src="DOCS/freeform.jpg" alt="Freeform Variance Visualization" width="50%"/>
+  <img src="DOCS/half_ball.jpg" alt="Half Ball Variance Visualization" width="48%"/>
+  <img src="DOCS/freeform.jpg" alt="Freeform Variance Visualization" width="48%"/>
 </p>
 <p align="center"><em>Euclidean Average Variance Visualizations for 3D point cloud scans. Left: Half Ball geometry. Right: Freeform geometry.</em></p>
 
