@@ -91,7 +91,7 @@ landmarks3D/                    # Root repository
     └── variance_distributions/
 ```
 
-## Cluster Consistency
+## Results
 
 <p align="center">
   <img src="DOCS/half_ball.jpg" alt="Half Ball Variance Visualization" width="48%"/>
